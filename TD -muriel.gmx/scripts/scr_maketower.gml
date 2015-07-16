@@ -1,5 +1,5 @@
 //brukes for å plassere rett tårn
-if assigned = 1 {
+if assigned = 1 and obj_btn_tower.afford {
     with instance_create(mouse_x,mouse_y,obj_pop) {
         color = c_red;
         golddown = true;
@@ -8,4 +8,6 @@ if assigned = 1 {
     instance_create(x,y,obj_tower);
     gold -= obj_btn_tower.cost;
     obj_btn_tower.cost += 10;
-}
+    }else{
+        assigned=0
+    }

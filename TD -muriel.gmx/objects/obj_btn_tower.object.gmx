@@ -27,6 +27,31 @@
             <kind>1</kind>
             <string>cost = 10;
 image_speed = 0;
+afford = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if cost &lt;=gold afford=true
+else afford=false
 </string>
           </argument>
         </arguments>
@@ -49,7 +74,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if cost &lt;= gold obj_mouse.assigned = 1;
+            <string>if afford &lt;= gold obj_mouse.assigned = 1;
 </string>
           </argument>
         </arguments>
