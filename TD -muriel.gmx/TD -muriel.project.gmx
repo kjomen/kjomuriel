@@ -45,6 +45,7 @@
     <font>fonts\fnt_debug</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_TEST</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_dirt</object>
     <object>objects\obj_control</object>
