@@ -42,6 +42,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_level</font>
     <font>fonts\fnt_money</font>
+    <font>fonts\fnt_debug</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_grass</object>

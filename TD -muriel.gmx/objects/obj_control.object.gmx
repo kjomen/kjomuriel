@@ -75,6 +75,29 @@ if cheats {
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_texture_flush();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
@@ -93,11 +116,12 @@ if cheats {
           <argument>
             <kind>1</kind>
             <string>randomize();//random seed, for at tilfeldige verdier er forskjellig for hver gang man spiller
+texture_set_interpolation(true);
 
 //globale variabler: 
 globalvar wave, mobs, time, left, gold, c_gold, hudobj, points, paused, cheats;
 
-cheats =true;//om du vil ha evig gull, og spawne tårn i max-lvl
+cheats = false;//om du vil ha evig gull, og spawne tårn i max-lvl
 paused = false;//spillet kan pauses mellom runder, eksperimentelt
 wave = 1; //current round
 mobs = wave*3; //mobs left to spawn
@@ -164,6 +188,35 @@ if hudobj != instance_nearest(x,y,obj_control) {
 
 
 //if instance_exists(hudobj) {
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///debug text
+if debug_mode {
+    draw_set_color(c_white);
+    draw_set_font(fnt_debug);
+    
+    
+    
+    draw_text(0,0,"FPS: "+string(fps_real));
+}
 </string>
           </argument>
         </arguments>

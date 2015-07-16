@@ -75,7 +75,7 @@ image_speed = 0;
             <string>draw_self();
 draw_sprite(spr_tower_head,0,x+16,y+16);
 draw_sprite(spr_tower_cannon,0,x+16,y+16);
-
+draw_set_font(fnt_level);
 if cost &lt;= gold {
     draw_set_color(c_gold);
 }else draw_set_color(c_red);
